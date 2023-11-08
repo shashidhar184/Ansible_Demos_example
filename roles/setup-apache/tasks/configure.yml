@@ -1,9 +1,9 @@
 ---
-- name: copy a index.html
-  copy:
-   src: /opt/ansible/index.html
-   dest: /var/www/html
-   mode: 0666
+- name: create a default index.html page
+  template:
+    src: web_page_template.j2
+    dest: /var/www/html/index.html
+   
 
 - name: ensure the default Apache port is {{ port }}
   lineinfile:
