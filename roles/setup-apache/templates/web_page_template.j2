@@ -1,9 +1,11 @@
 <html>
 <body>
 
-<h1> {{ ansible_play_name }} </h1>
+<h1> *********Welcome to {{ ansible_distribution }} Server. *********** </h1>
 
-<h2> IP address/Hostname is: {{ inventory_hostname }} </h2>
+<h2> IP address of this machine is {{ ansible_default_ipv4.address }} </h2>
+
+<h3> The machine hostname is {{ ansible_fqdn }}
 
 </body>
 </html>
