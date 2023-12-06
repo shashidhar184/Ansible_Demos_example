@@ -1,0 +1,13 @@
+
+- name: Install Java on Redhat
+  yum:
+   name: java
+   state: installed 
+  when: ansible_os_family == "RedHat"
+
+- name: Install Java on Debain
+  apt:
+   name: default-jdk
+   state: present
+  when: ansible_os_family == "Debain"
+

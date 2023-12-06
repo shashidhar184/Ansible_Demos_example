@@ -17,23 +17,23 @@
 
   - name: download tomcat packages
     get_url:
-      url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.95/bin/apache-tomcat-8.5.95.tar.gz
+      url: https://downloads.apache.org/tomcat/tomcat-8/v8.5.96/bin/apache-tomcat-8.5.96.tar.gz
       dest: /opt
 
   - name: untar apache packages
     unarchive:
-      src: /opt/apache-tomcat-8.5.95.tar.gz
+      src: /opt/apache-tomcat-8.5.96.tar.gz
       dest: /opt
       remote_src: yes
 
 
   - name: add execution permissions on startup.sh file 
     file:
-      path: /opt/apache-tomcat-8.5.95/bin/startup.sh
+      path: /opt/apache-tomcat-8.5.96/bin/startup.sh
       mode: 0777
 
   - name: start tomcat services
     shell: nohup ./startup.sh
     args:
-      chdir: /opt/apache-tomcat-8.5.95/bin
+      chdir: /opt/apache-tomcat-8.5.96/bin
 

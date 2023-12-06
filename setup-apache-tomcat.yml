@@ -1,0 +1,19 @@
+---
+- name: install Java
+  hosts: all
+  become: true
+  roles:
+    - java
+
+- name: setup Apache HTTP server
+  hosts: all
+  become: true
+  roles:
+    - setup-apache
+
+- name: Tomcat
+  hosts: all
+  become: true
+  roles:
+    - tomcat
+    
