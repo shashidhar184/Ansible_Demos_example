@@ -1,6 +1,6 @@
 ---
 - name: install apache2 on ubuntu server
-  hosts: dbservers
+  hosts: appservers
   become: true
   tasks:
   - name: install apache2
