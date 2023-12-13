@@ -1,0 +1,8 @@
+---
+- name: perform test on latest code 
+  hosts: all
+  gather_facts: no
+  tasks:
+   - name: perform test on latest code in environment.
+     debug:
+       msg: "Test completed on latest code."

@@ -1,0 +1,8 @@
+---
+- name: Deploy in production 
+  hosts: all
+  gather_facts: no
+  tasks:
+   - name: Deploy the latest code in production.
+     debug:
+       msg: "latest code deployed in production."

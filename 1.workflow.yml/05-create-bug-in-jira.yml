@@ -1,0 +1,8 @@
+---
+- name: Create a bug in Jira
+  hosts: all
+  gather_facts: no
+  tasks:
+   - name: Create a Jira ticket on the issue.
+     debug:
+       msg: "Jira ticket created on the issue."

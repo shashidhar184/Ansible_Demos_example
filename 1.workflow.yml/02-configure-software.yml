@@ -1,0 +1,8 @@
+---
+- name: configure software
+  hosts: all
+  gather_facts: no
+  tasks:
+   - name: configure a software in environment.
+     debug:
+       msg: "software is configured."

@@ -1,0 +1,8 @@
+---
+- name: deploy latest code 
+  hosts: all
+  gather_facts: no
+  tasks:
+   - name: deploy latest code in environment.
+     debug:
+       msg: "latest code is deployed."
